@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Ria de Vigo</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-<script src="https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
-<style>
-    body { margin: 0; padding: 0; }
+  <head>
+    <meta charset="utf-8" />
+    <title>Ria de Vigo</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-    #menu {
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      #menu {
         position: absolute;
         background: #fafafa;
         padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-        }   
+        font-family: "Open Sans", sans-serif;
+      }
 
-    .coordinates {
+      .coordinates {
         background: rgba(255, 255, 255, 0.5);
         color: #000000;
         position: absolute;
@@ -30,9 +44,9 @@
         line-height: 18px;
         border-radius: 3px;
         display: none;
-    }
+      }
 
-    /* .marker {
+      /* .marker {
         background-image: url('mapbox-icon.png');
         background-size: cover;
         width: 50px;
@@ -41,32 +55,28 @@
         cursor: pointer;
     } */
 
-    .marker{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        box-sizing:border-box;
+      .marker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
         width: 30px;
         height: 30px;
-        color:#fff;
-        background: #4D2D73;
-        border:solid 2px;
+        color: #fff;
+        background: #4d2d73;
+        border: solid 2px;
         border-radius: 0 70% 70%;
-        box-shadow:0 0 2px #000;
+        box-shadow: 0 0 2px #000;
         cursor: pointer;
-        transform-origin:0 0;
+        transform-origin: 0 0;
         transform: rotateZ(-135deg);
-    }
-
-    
-
-</style>
-</head>
-<body>
-<div id="map"></div>
-<!-- <canvas id="canvasID" width="400" height="400">Canvas not supported</canvas> -->
-<pre id="coordinates" class="coordinates"></pre>
-
- <script src="bundle.js"></script>
-</body>
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Test5</h1>
+    <div id="map"></div>
+    <pre id="coordinates" class="coordinates"></pre>
+    <script src="bundle.js"></script>
+  </body>
 </html>
