@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import mapboxgl from "mapbox-gl";
+import fc from "fc";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -74,3 +75,46 @@ geolocate.on("geolocate", function (e) {
 
 //full screen
 map.addControl(new mapboxgl.FullscreenControl());
+
+let ctx = fc(()=> {
+  ctx.fillStyle='black'
+  let items=[]
+  for (let i = 0; i < 2; i++) {
+      items.push({
+          w:20+Math.random()*80,
+          h:20+Math.random()*80
+      })
+  hbox(items,10)
+  }
+}, false)
+
+
+let hbox=(items,space)=>{
+  let x=space
+  let y =space
+  for (let i = 0; i < items.length; i++) {
+      let item = items[i];
+      ctx.fillRect(x,y,item.w,item.h)
+      x+=item.w+space
+  }
+}
+
+/* map.on('load', () => {
+  map.addSource('canvas-source', {
+  type: 'canvas',
+  canvas: 'canvasID',
+  coordinates: [
+  [-8.779283, 42.242736],
+  [-8.792236, 42.241011]
+  ],
+  // Set to true if the canvas source is animated. If the canvas is static, animate should be set to false to improve performance.
+  animate: true
+  });
+   
+  map.addLayer({
+      id: 'canvas-layer',
+      type: 'raster',
+      source: 'canvas-source'
+    });
+
+}); */
