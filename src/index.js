@@ -94,7 +94,7 @@ let hbox = (items, space) => {
     x += item.w + space;
   }
 };
-
+const size = 200;
 const pulsingDot = {
   width: size,
   height: size,
