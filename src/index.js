@@ -27,6 +27,7 @@ const map = new mapboxgl.Map({
   preserveDrawingBuffer: true,
 });
 
+
 // disable map rotation using right click + drag
 map.dragRotate.disable();
 //enable double click
@@ -62,14 +63,15 @@ map.addControl(new mapboxgl.FullscreenControl());
 var geolocate = new mapboxgl.GeolocateControl({
   positionOptions: { enableHighAccuracy: true },
   trackUserLocation: true,
-  showUserHeading: true,
+  showUserHeading: true
 });
+
 map.addControl(geolocate);
 geolocate.on("geolocate", function (e) {
   var lon = e.coords.longitude;
   var lat = e.coords.latitude;
   var position = [lon, lat];
-  console.log(position);
+  console.log("POSICAO "+position);
 });
 
 //incorporate vector features to canvas
@@ -94,6 +96,7 @@ let hbox = (items, space) => {
     x += item.w + space;
   }
 };
+
 const size = 200;
 const pulsingDot = {
   width: size,
@@ -158,7 +161,21 @@ map.on("load", () => {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [0, 0], // icon position [lng, lat]
+            coordinates: [-8.688919, 42.274717], // icon position [lng, lat]
+          },
+        },
+        {
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [-8.778681, 42.228481], // icon position [lng, lat]
+          },
+        },
+        {
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [-8.792236, 42.241011], // icon position [lng, lat]
           },
         },
       ],
